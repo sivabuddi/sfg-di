@@ -1,10 +1,8 @@
 package guru.springframework.sfgdi.controllers;
 
-import guru.springframework.sfgdi.services.GreetingServiceImpl;
+import guru.springframework.sfgdi.services.ConstructorInjectedGreetingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class PropertyInjectedControllerTest {
     PropertyInjectedController pcontroller;
@@ -12,7 +10,7 @@ class PropertyInjectedControllerTest {
     @BeforeEach
     void setUp() {
         pcontroller=new PropertyInjectedController();
-        pcontroller.greetingService = new GreetingServiceImpl();
+        pcontroller.greetingService = new ConstructorInjectedGreetingService();
     }
 
     @Test
